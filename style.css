@@ -233,7 +233,7 @@ h2.section-title::after {
     animation: blink-caret .75s step-end infinite;
 }
 
-/* Style des "Cartes" pour les expériences/formations */
+/* Style des "Cartes" */
 .card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -241,7 +241,7 @@ h2.section-title::after {
     padding: 25px;
     margin-bottom: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Important: empêche les enfants (comme l'image) de déborder */
+    overflow: hidden; /* Empêche les enfants (l'image) de déborder */
 }
 .card:hover {
     transform: translateY(-5px);
@@ -349,13 +349,12 @@ footer {
 }
 
 /* * =============================================
- * *** STYLE AMÉLIORÉ POUR LES IMAGES DE PROJET ***
+ * *** RÈGLE DÉFINITIVE POUR LES IMAGES PROJET ***
  * =============================================
 */
 .card img {
-    width: 100%; /* L'image prend 100% de la largeur de la carte */
-    max-height: 400px; /* Hauteur maximale pour éviter qu'elle soit trop grande */
-    object-fit: cover; /* Recadre l'image pour remplir l'espace sans la déformer (très pro) */
+    max-width: 100%;  /* L'image ne sera JAMAIS plus large que la carte */
+    height: auto;       /* Garde le bon ratio hauteur/largeur */
     border-radius: 6px; 
     margin-top: 20px; 
     border: 1px solid var(--border-color);
