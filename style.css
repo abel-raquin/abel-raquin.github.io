@@ -212,10 +212,8 @@ nav a:hover::after {
 */
 section {
     padding: 80px 0;
-    /* On enlève la bordure pointillée pour un look plus propre entre les pages */
 }
 
-/* On ajoute une bordure sur la section d'accueil pour la séparer */
 #accueil {
      border-bottom: 1px dashed var(--border-color);
 }
@@ -242,7 +240,6 @@ h2.section-title::after {
     border-radius: 8px;
     padding: 25px;
     margin-bottom: 20px;
-    /* Effet au survol */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
@@ -290,14 +287,13 @@ h2.section-title::after {
 .skill-category ul {
     list-style: none;
 }
-/* Style de puce personnalisé */
 .skill-category li {
     position: relative;
     padding-left: 25px;
     margin-bottom: 10px;
 }
 .skill-category li::before {
-    content: '»'; /* Caractère "code" */
+    content: '»'; 
     position: absolute;
     left: 0;
     top: -2px;
@@ -352,6 +348,20 @@ footer {
 }
 
 /* * =============================================
+ * *** NOUVEAU STYLE POUR LES IMAGES DE PROJET ***
+ * =============================================
+*/
+.card img {
+    max-width: 100%; /* L'image ne dépassera pas la carte */
+    height: auto;
+    border-radius: 6px; /* Bords arrondis */
+    margin-top: 20px; /* Espace entre le texte et l'image */
+    border: 1px solid var(--border-color); /* Petite bordure assortie */
+    display: block; /* Assure que l'image est bien centrée si on ajoute margin: auto */
+}
+
+
+/* * =============================================
  * RESPONSIVE DESIGN (pour mobile)
  * =============================================
 */
@@ -380,7 +390,6 @@ footer {
     }
     .hero-text .subtitle {
         font-size: 1.2rem;
-        /* On simplifie l'animation sur mobile */
         animation: none;
         border-right: none;
         white-space: normal;
